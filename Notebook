@@ -61,6 +61,7 @@ def process_address(address):
         text = re.sub(pattern, repl, text, flags=re.IGNORECASE)
     
     # tüm il adlarını işaretle
+
     for il in ILLER:
         if f" {il} " in f" {text} ":
             text = text.replace(il, f"il_{il}_il")
